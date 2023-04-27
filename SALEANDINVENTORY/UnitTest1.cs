@@ -12,7 +12,8 @@ namespace SALEANDINVENTORY
         public void TestMethod1()
         {
             IWebDriver driver = new ChromeDriver();
-            var element = driver.FindElement(By.XPath(""));
+            driver.Url = "https://web.whatsapp.com/";
+        //    var element = driver.FindElement(By.XPath(""));
                 }
     }
 }
