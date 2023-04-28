@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace SALEANDINVENTORY
 {
@@ -10,6 +11,7 @@ namespace SALEANDINVENTORY
     public class UnitTest1
     {
         [TestMethod]
+        [TestCategory("Script1")]
         public void TestMethod1()
         {
             //to launch empty Browser
@@ -69,7 +71,7 @@ namespace SALEANDINVENTORY
             }
             if(!flag) { Console.WriteLine("searching window is not present"); }
             driver.SwitchTo().Window(cwin);
-                driver.FindElement(By.XPath("//input[@type='email']")).SendKeys("rajeev@22925gmail.com");
+            driver.FindElement(By.XPath("//input[@type='email']")).SendKeys("rajeev@22925gmail.com");
             //driver.FindElement(By.XPath("//input[@type='password']")).SendKeys("Rajeev@123");
 
             driver.Quit();
