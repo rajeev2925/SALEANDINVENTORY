@@ -10,22 +10,18 @@ using System.Threading.Tasks;
 namespace SALEANDINVENTORY.Practice
 {
     [TestClass]
+    
     internal class PracticeClass
     {
         [TestMethod]
+        [TestCategory("methods")]
         public void TestMethod2()
         {
             //to launch empty Browser
             IWebDriver driver = new ChromeDriver();
             // to launch application
-            driver.Url = "https://in.indeed.com/";
-            // enter the 'test' in job title textfield
-            driver.FindElement(By.XPath("//input[@name='q']")).SendKeys("testing engineer");
-            //selecting the specific job title
-            driver.FindElement(By.XPath("//input[@name='l']")).SendKeys("bangalore");
-            //clicking on find jobs button
-            driver.FindElement(By.XPath("//button[.='Find jobs']")).Click();
-            //
+            driver.Url = "https://whatsapp.com";
+   
            
 
         }
