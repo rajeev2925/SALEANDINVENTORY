@@ -24,7 +24,7 @@ namespace SALEANDINVENTORY
             driver.Dispose();
             Console.WriteLine("****browser lost the connection****");
         }
-      */
+      
         [TestInitialize] 
         public void Init()
         {
@@ -39,17 +39,20 @@ namespace SALEANDINVENTORY
             driver.Quit();
             Console.WriteLine("***apllication closed***");
         }
+      */
+        [Priority(-1)]
         [TestMethod]
         public void TestMethod1()
         {
             System.Console.WriteLine("***Method 1***");
         }
-
+        [Priority(2)]
         [TestMethod]
         public void TestMethod2()
         {
             System.Console.WriteLine("***Method 2***");
         }
+        [Priority(1)]
         [TestMethod]
         public void TestMethod3()
         {
