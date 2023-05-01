@@ -26,13 +26,11 @@ namespace SALEANDINVENTORY
             driver.FindElement(By.XPath("//input[@name='l']")).SendKeys("bangalore");
             //clicking on find jobs button
             driver.FindElement(By.XPath("//button[.='Find jobs']")).Click();
-
-          //  WebElement mw = (WebElement)driver.FindElement(By.XPath("//div[@class='icl-Modal']"));
-            
-
+     
             //selecting perticuler company
             driver.FindElement(By.XPath("//div[.='Company']")).Click();
-            driver.FindElement(By.XPath("//a[.='IBM (83)']")).Click();
+
+            driver.FindElement(By.XPath("//a[contains(.,'IBM')]")).Click();
             // user verifying selected company is displayed
             String acname=driver.FindElement(By.XPath("//span[.='IBM']")).Text;
             if(acname.Equals("IBM"))
